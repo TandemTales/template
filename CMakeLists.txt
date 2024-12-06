@@ -30,12 +30,10 @@ CPMAddPackage("gh:TheLartians/PackageProject.cmake@1.8.0")
 #)
 
 # ---- Add source files ----
-file(GLOB_RECURSE headers CONFIGURE_DEPENDS 
-  "${CMAKE_CURRENT_SOURCE_DIR}/source/*.h"
-  "${CMAKE_CURRENT_SOURCE_DIR}/source/*.hpp"
-)
 file(GLOB_RECURSE sources CONFIGURE_DEPENDS 
-  "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/source/*.h"
+"${CMAKE_CURRENT_SOURCE_DIR}/source/*.hpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp"
   "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cxx"
 )
 
@@ -51,6 +49,10 @@ target_include_directories(
 
 # Example link library:
 #target_link_libraries(${PROJECT_NAME} hash)
+
+# This line will create a folder hierarchy in the Visual Studio solution explorer
+# that matches the directory structure under ${CMAKE_CURRENT_SOURCE_DIR}/source.
+source_group(TREE "${CMAKE_CURRENT_SOURCE_DIR}/source" FILES ${sources})
 
 # the location where the project's version header will be placed should match the project's regular
 # header paths
