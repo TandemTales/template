@@ -31,15 +31,15 @@ CPMAddPackage("gh:TheLartians/PackageProject.cmake@1.8.0")
 
 # ---- Add source files ----
 file(GLOB_RECURSE sources CONFIGURE_DEPENDS 
-"${CMAKE_CURRENT_SOURCE_DIR}/source/*.h"
-"${CMAKE_CURRENT_SOURCE_DIR}/source/*.hpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/source/*.h"
+  "${CMAKE_CURRENT_SOURCE_DIR}/source/*.hpp"
+  "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp"
   "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cxx"
 )
 
 # ---- Create library ----
 add_library(${PROJECT_NAME} ${headers} ${sources})
-set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 23)
+set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 20)
 
 target_include_directories(
   ${PROJECT_NAME} PUBLIC 
