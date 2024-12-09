@@ -1,6 +1,6 @@
 #include "template.h"
 
-namespace stk
+namespace tt
 {
 	void c_template::go_template() const
 	{

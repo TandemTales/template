@@ -1,4 +1,4 @@
-namespace stk
+namespace tt
 {
 	class c_template
 	{

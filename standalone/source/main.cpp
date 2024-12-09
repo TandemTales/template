@@ -1,6 +1,6 @@
 #include "template.h"
 
-using namespace stk;
+using namespace tt;
 
 int main()
 {
