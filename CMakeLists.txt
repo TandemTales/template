@@ -21,10 +21,10 @@ include(${CPM_DOWNLOAD_LOCATION})
 CPMAddPackage("gh:TheLartians/PackageProject.cmake@1.8.0")
 
 # Example package:
-## Add package: shoejunk/hash
+## Add package: TandemTales/hash
 #CPMAddPackage(
 #	NAME hash
-#	GITHUB_REPOSITORY shoejunk/hash
+#	GITHUB_REPOSITORY TandemTales/hash
 #	#VERSION 0.0.1
 #	GIT_TAG main
 #)
